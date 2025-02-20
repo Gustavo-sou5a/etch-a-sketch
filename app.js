@@ -19,11 +19,19 @@ for (let i = 0; i < NUM_SQUARES_PER_SIDE; i++) {
         square.style.width = `${CONTAINER_SIDE / NUM_SQUARES_PER_SIDE}px`;
         line.appendChild(square);
 
-        // square.addEventListener("mouseover", hoverEvent(square));
+        // square.addEventListener("mouseover", () =>  { square.style.backgroundColor = "red"; });
+        // square.addEventListener("mouseleave", () =>  { square.style.backgroundColor = ""; });
+
+        square.addEventListener("mouseover", (e) => mouseOverEvent(e));
+        square.addEventListener("mouseleave", (e) => mouseLeaveEvent(e));
     }
 }
 
-// function hoverEvent(div) {
-//     div.style.backgroundColor = "red";
-// }
+function mouseOverEvent(e) {
+    e.target.style.backgroundColor = "red";
+}
+
+function mouseLeaveEvent(e) {
+    e.target.style.backgroundColor = "green";
+}
 
