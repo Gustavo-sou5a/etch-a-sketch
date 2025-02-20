@@ -10,6 +10,7 @@ html {
 
 #container {
     border: solid black 1px;
+    background-color: black;;
 }
 
 body {
@@ -30,4 +31,5 @@ body {
 .square {
     border: solid black 1px;
     margin: 0;
+    background-color: white;
 }

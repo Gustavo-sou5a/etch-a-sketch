@@ -45,10 +45,19 @@ function main() {
             square.style.height = `${CONTAINER_SIDE / NUM_SQUARES_PER_SIDE}px`;
             square.style.width = `${CONTAINER_SIDE / NUM_SQUARES_PER_SIDE}px`;
             line.appendChild(square);
-
+            square.style.opacity = 1;
             square.addEventListener("mouseover", () => {square.style.backgroundColor = "red";});
-            square.addEventListener("mouseleave", () => {square.style.backgroundColor = "green";});
+            square.addEventListener("mouseleave", () => {
+                square.style.backgroundColor = randomColorGenerator();
+                square.style.opacity *= 0.9;
+            });
         }
     }
 }
 
+function randomColorGenerator() {
+    const r = Math.random() * 255;
+    const g = Math.random() * 255;
+    const b = Math.random() * 255;
+    return `rgb(${r}, ${g}, ${b})`;
+}
