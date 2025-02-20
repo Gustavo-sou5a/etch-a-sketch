@@ -1,0 +1,32 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+#container {
+    border: solid black 1px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    display: flex;
+    border: solid black 1px;
+    margin: 0;
+}
+
+.square {
+    border: solid black 1px;
+    margin: 0;
+}
